@@ -8,6 +8,7 @@ mockApi.listen();
 const app = express();
 
 app.get("/mocked-response", async (req, res) => {
+    console.log("Here we go!");
     const { data } = await axios.get("http://localhost:8082/user-data");
     return data;
 });
